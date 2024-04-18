@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<link rel="stylesheet" href="roko.css">
+</head>
+<body>
+<div id="container">
+    <h2>Upload Excel File</h2>
+    <label for="fileInput" id="fileLabel">Choose File</label>
+    <input type="file" id="fileInput" accept=".csv,.xlsx" onchange="handleFile()">
+</div>
+
+<script>
+    function handleFile() {
+        const fileInput = document.getElementById('fileInput');
+        const file = fileInput.files[0];
+        
+        if (file) {
+            const fileName = file.name;
+            const fileExtension = fileName.split('.').pop().toLowerCase();
+            if (fileExtension === 'csv' || fileExtension === 'xlsx') {
+                // Handle the file
+                console.log('File uploaded:', fileName);
+            } else {
+                alert('Please upload a CSV or XLSX file.');
+                // Clear the file input
+                fileInput.value = '';
+            }
+        }
+    }
+</script>
+</body>
+</html>
