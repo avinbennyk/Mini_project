@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Result</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('/Result/Image/snow.jpg'); /* Add your image URL here */
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    #container {
+        max-width: 800px;
+        padding: 30px;
+        background-color: rgba(255, 255, 255, 0.5); /* Background color with opacity */
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    h1 {
+        text-align: center;
+    }
+    #filePreview {
+        margin-bottom: 20px;
+    }
+    #result {
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.5); /* Transparent background */
+        border-radius: 20px;
+    }
+</style>
+</head>
+<body>
+<div id="container">
+    <h1>Excel Analysis Result</h1>
+    <div id="filePreview">
+        <h2>Uploaded Excel File:</h2>
+        <!-- Display uploaded file here -->
+        <p>Filename: <strong>example.xlsx</strong></p>
+        <!-- You can add more details about the file if needed -->
+    </div>
+    <div id="result">
+        <h2>Analysis Result:</h2>
+        <!-- Display analysis result here -->
+        <p>This is where you display the analysis result of the uploaded Excel file.</p>
+        <!-- You can format the result as needed -->
+    </div>
+</div>
+</body>
+</html>
